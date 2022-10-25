@@ -37,7 +37,7 @@ DELETE * FROM `items` WHERE companyId = 1
 DELETE * FROM `items` WHERE cost < 10000
 
 /* 10. Cree una función que permita insertar registros en la tabla colores*/
-
+INSERT INTO `colors`( `code`, `name`) VALUES ('[value-2]','[value-3]')
 
 /* 11. Eliminar todos los datos de la tabla colores */
 DELETE * FROM `colors` 
