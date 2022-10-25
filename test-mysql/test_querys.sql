@@ -23,6 +23,7 @@ el precio a agregar debe ser calculado de la siguiente forma: costo del item + 1
 
 
 /* 6. Incrementar el precio de los items en un 20% */
+UPDATE items SET price = ROUND( price * 1.20, 2 );
 
 
 /* 7. Consultar los items que terminen en la letra "A" en el nombre, y anteponer la 
@@ -43,4 +44,4 @@ DELETE * FROM `colors`
 
 /* 12. Agregar un campo llamado "description" en la tabla items, que permita ser NULL, 
 y que tenga un máximo de 200 caracteres */
-
+ALTER TABLE items ADD description VARCHAR(200) NULL; 
