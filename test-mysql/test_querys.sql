@@ -7,7 +7,7 @@ Generar scripts que realicen las siguientes consultas:
 
 /* 1. Consultar los items que pertenezcan a la compañia con ID #3 (debe utilizar INNER JOIN), 
    en donde dicha compañia contenga una 'A' en su nombre */
-
+SELECT * FROM `items` INNER JOIN companies ON companies.id=items.companyId WHERE companyId= 3 AND companies.name LIKE "%a%"
 
 /* 2. Mostrar los items para los cuales su precio se encuentre en el rango 70000 a */
  SELECT * FROM `items` WHERE price BETWEEN 70000 AND 90000
@@ -20,7 +20,7 @@ SELECT i.name,c.name FROM items i INNER JOIN colors c on i.colorId = c.id WHERE 
 
 /* 5. Se requiere asignar un precio a los items cuyo precio sea NULL, 
 el precio a agregar debe ser calculado de la siguiente forma: costo del item + 10.000*/
-
+update items set price= cost + 0000  WHERE price = 0
 
 /* 6. Incrementar el precio de los items en un 20% */
 UPDATE items SET price = ROUND( price * 1.20, 2 );
